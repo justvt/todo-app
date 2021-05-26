@@ -1,4 +1,4 @@
-# todo app Vanila JS
+# Todo app Vanila JS
 
 <h1>Feature</h1>
   
