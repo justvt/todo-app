@@ -83,6 +83,12 @@ function getProgress() {
     let progressValue = document.querySelector('.todo__progress-value');
     let progressWidth = todosElCompleted.length * 100 / todosEl.length;
 
+    if (todosEl.length === 0) {
+        todoMessage.classList.remove('_hidden');
+        progressValue.innerHTML = '0% / 100%';
+        progressLine.style.width = 0 + '%';
+    }
+
     if (todosEl.length) {
         progressLine.style.width = progressWidth + '%';
         todoMessage.classList.add('_hidden');
@@ -91,7 +97,7 @@ function getProgress() {
 
     if (todosElCompleted.length > 0 && progressWidth === 100) {
         setTimeout(function () {
-            shoModal()
+            showModal()
         }, 500)
     }
 }
@@ -105,7 +111,7 @@ todoMessage.addEventListener('click', function () {
 const modalCloseButtons = document.querySelectorAll('[data-modal-close]');
 const allModals = document.querySelectorAll('[data-modal]');
 
-function shoModal() {
+function showModal() {
     const modal = document.querySelector('.modal');
 
     modal.classList.add('_is-active');
