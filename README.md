@@ -1,5 +1,4 @@
 # todo-app
-todo app 
 
 <h1>Feature</h1>
   
