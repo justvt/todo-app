@@ -1,12 +1,18 @@
 # todo-app
 todo app 
 
-Features
+<h1>Feature</h1>
+  
+<ul>
+  <li>Create a task</li>
+  <li>Mark as completed</li>
+  <li>Delete a task</li>
+  <li>Data saved through local storage</li>
+</ul>
 
-Create a task
 
-Mark as completed
 
-Delete a task
 
-Data saved through local storage
+
+
+
