@@ -1,0 +1,144 @@
+// ВЫРАВНИВАНИЕ FLEXBOX
+@mixin flex-a{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+@mixin flex-b{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flex-c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin column-c{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+@mixin column-b{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@mixin column-a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+ 
+
+@mixin uselect{
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;   
+}
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin linear-gradient($direction, $fromColor, $toColor){
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, $direction, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient($direction, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient($direction, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient($direction, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient($direction, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient($direction, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+  
+
+@mixin css-triangle($color, $direction, $size: 6px, $round: false){
+    
+    @if $round {
+      border-radius: 3px;
+    }
+    @if $direction == down {
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-top: $size solid $color;
+      margin-top: 0 - round( $size / 2.5 );
+    } @else if $direction == up {
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-bottom: $size solid $color;
+      margin-bottom: 0 - round( $size / 2.5 );
+    } @else if $direction == right {
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-left: $size solid $color;
+      margin-right: -$size;
+    } @else if  $direction == left {
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-right: $size solid $color;
+      margin-left: -$size;
+    }
+  }
+
+//media
+
+@mixin bp375 {
+  @media screen and (min-width: 375px) {
+    @content
+  }
+}
+
+@mixin bp540 {
+  @media screen and (min-width: 540px) {
+    @content
+  }
+}
+
+
+@mixin bp768 {
+  @media screen and (min-width: 768px) {
+    @content
+  }
+}
+
+
+@mixin bp1024 {
+  @media screen and (min-width: 1024px) {
+    @content
+  }
+}
+
+
+@mixin bp1280 {
+  @media screen and (min-width: 1280px) {
+    @content
+  }
+}
+
+@mixin bp1440 {
+  @media screen and (min-width: 1440px) {
+    @content
+  }
+}
+
+@mixin bp1680 {
+  @media screen and (min-width: 1680px) {
+    @content
+  }
+}
+
+@mixin bp1920 {
+  @media screen and (min-width: 1920px) {
+    @content
+  }
+}
+
+@mixin bp2500 {
+  @media screen and (min-width: 2500px) {
+    @content
+  }
+}
+

@@ -1,0 +1,98 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+[hidden] {
+	display: none;
+}
+
+::placeholder {
+  color: var(--text);
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+
+input, textarea, button {
+  outline: none;
+  font-family: inherit;
+  color: var(--text);
+  border: 1px solid var(--border-color);
+
+  &:focus:required:invalid {
+    border-color: var(--invalid-color);
+  }
+
+  &:required:valid {
+    border-color: var(--valid-color);
+  }
+}
+
+
+input {
+  color: #000;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+
+body {
+  @include column-b;
+
+  font-size: 16px;
+  position: relative;
+  line-height: 1.2;
+  font-family: var(--font-accent);
+  background-image: linear-gradient(to top right, rgb(101, 115, 255), rgb(111, 114, 247), rgb(120, 114, 239), rgb(130, 113, 231), rgb(139, 112, 223), rgb(149, 111, 215), rgb(158, 111, 208), rgb(168, 110, 200), rgb(177, 109, 192), rgb(187, 108, 184), rgb(196, 108, 176), rgb(206, 107, 168));
+  font-weight: 300;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  color: var(--white-color);
+}
+
+
+//стили для текстовых страниц
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--white-color);
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+
+.main {
+  flex: 1 0 auto;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+

@@ -1,0 +1,12 @@
+.btn {
+	display: inline-block;
+	background-color: transparent;
+	border: 1px solid var(--accent);
+	outline: none;
+	color: var(--white-color);
+	text-align: center;
+	cursor: pointer;
+	transition: .2s linear;
+	padding: 11px 29px;
+
+}

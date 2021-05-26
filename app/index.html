@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>VT</title>
+	<meta name="description" content="HTML template">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+
+<body>
+	<!-- MAIN -->
+	<main class="main">
+		<form class="todo">
+			<div class="todo__header">
+				<h1 class="todo__title">TODO</h1>
+				<div class="todo__field">
+					<input type="text" placeholder="What do you want to do?">
+				</div>
+			</div>
+			<div class="todo__body">
+				<p class="todo__message">Add any task</p>
+				<ul class="todo__list"></ul>
+			</div>
+			<div class="todo__footer">
+				<div class="todo__progress">
+					<span class="todo__progress-line"></span>
+					<span class="todo__progress-value">0% / 100%</span>
+				</div>
+			</div>
+		</form>
+	</main>
+	<!-- MAIN -->
+
+	<!-- MODAL -->
+	<div class="modal" id="modal-1" data-modal>
+		<div class="modal__body">
+			<div class="modal__content">
+				<div class="modal__title">Congratulation!</div>
+				<div class="modal__subtitle">You completed all tasks</div>
+				<button type="button" class="close-btn" data-modal-close>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><line x1="13" y1="1" x2="1" y2="13"/><line x1="1" y1="1" x2="13" y2="13"/></svg>
+				</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/custom.js"></script>
+</body>
+</html>
